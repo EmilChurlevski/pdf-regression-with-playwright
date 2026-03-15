@@ -1,0 +1,14 @@
+{
+  "name": "pdf-regression-with-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.5.0"
+  },
+  "scripts": {},
+  "dependencies": {
+    "pdf-to-png-converter": "^3.14.0"
+  }
+}
