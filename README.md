@@ -14,7 +14,9 @@ This project showcases how to use Playwright's visual testing capabilities to co
 ## Installation
 
 ```bash
+cd pdf-regression-with-playwright
 yarn install
+yarn playwright install
 ```
 
 ## Running Tests
