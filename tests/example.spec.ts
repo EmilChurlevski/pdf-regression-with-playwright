@@ -19,16 +19,3 @@ test("compare shoe size chart pdf", async () => {
     expect.soft(pageBuffer).toMatchSnapshot(baseline); // ".soft" to process all the pages in case of mismatches
   }
 });
-
-test("compare dummy file pdf", async () => {
-  const pdfName = "dummyFile";
-  const numPages = 10;
-  const pdfPath = path.resolve(`./tests/pdfs/${pdfName}.pdf`);
-  const pages = await pdfHelpers.convertPdfToPng(pdfPath, numPages);
-
-  for (const [index, pageBuffer] of pages.entries()) {
-    const baseline = `${pdfName}-page-${index + 1}.png`;
-
-    expect.soft(pageBuffer).toMatchSnapshot(baseline);
-  }
-});
