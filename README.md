@@ -5,6 +5,8 @@ A learning project that demonstrates how to perform visual comparison of PDF fil
 ## Overview
 
 This project showcases how to use Playwright's visual testing capabilities to compare PDF documents page by page, detecting visual differences between PDF versions.
+For simplicity a platform separates the screenshots.
+In a real-world scenario, it is best to run the tests in docker containers to ensure consistent results across different environments.
 
 ## Prerequisites
 
