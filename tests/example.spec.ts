@@ -16,7 +16,7 @@ test("compare shoe size chart pdf", async () => {
   for (const [index, pageBuffer] of pages.entries()) {
     const baseline = `${pdfName}-page-${index + 1}.png`; // the name of the baseline or expected PNG.
 
-    expect(pageBuffer).toMatchSnapshot(baseline);
+    expect.soft(pageBuffer).toMatchSnapshot(baseline); // ".soft" to process all the pages in case of mismatches
   }
 });
 
@@ -29,6 +29,6 @@ test("compare dummy file pdf", async () => {
   for (const [index, pageBuffer] of pages.entries()) {
     const baseline = `${pdfName}-page-${index + 1}.png`;
 
-    expect(pageBuffer).toMatchSnapshot(baseline);
+    expect.soft(pageBuffer).toMatchSnapshot(baseline);
   }
 });
